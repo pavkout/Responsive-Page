@@ -72,8 +72,11 @@ this server is:
 npm start
 ```
 
+<<<<<<< HEAD
+=======
 Now browse to the app at `http://localhost:8000/app/index.html`.
 
+>>>>>>> master
 ## Testing
 
 There are two kinds of tests in the angular-seed application: Unit tests and End to End tests.
