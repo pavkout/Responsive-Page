@@ -1,0 +1,26 @@
+{
+  "name": "angular-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0",
+    "angular-material-full": "~0.10.0",
+    "angular-aria": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-ui-router": "0.2.15",
+    "angular-moment": "~0.10.3",
+    "moment": "~2.10.6",
+    "hammerjs": "hammer.js#~2.0.4",
+    "Ionicons": "ionicons#~2.0.1",
+    "jquery": "jquery-1.11.1#~2.1.4",
+    "angular-material-icons": "0.6.0",
+    "angular-material": "0.10.1"
+  }
+}
