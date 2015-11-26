@@ -21,6 +21,8 @@
     "Ionicons": "ionicons#~2.0.1",
     "jquery": "jquery-1.11.1#~2.1.4",
     "angular-material-icons": "0.6.0",
-    "angular-material": "0.10.1"
+    "angular-material": "0.10.1",
+    "AngularJS-Toaster": "0.4.16",
+    "angular-bootstrap-css": "3.3.5"
   }
 }
