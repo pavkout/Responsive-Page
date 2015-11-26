@@ -1,7 +1,7 @@
 /**
  * Created by Pavlos on 11/21/2015.
  */
-app.service("pagesService",function($http, $q,$rootScope){
+app.service("pagesService",function($http, $q,$rootScope,toaster){
 
     // Return public API.
     var service ={
@@ -32,7 +32,7 @@ app.service("pagesService",function($http, $q,$rootScope){
             })
             .error(function (data, status, headers, config)
             {
-                alert("Failed to get pages, status: "+status );
+                toaster.pop('error', "Σφάλμα", '<p>Error: status </p>', null, 'trustedHtml');
                 console.log( data);
                 def.reject("Failed to get pages");
             });
@@ -57,7 +57,7 @@ app.service("pagesService",function($http, $q,$rootScope){
             })
             .error(function (data, status, headers, config)
             {
-                alert("Failed to get spesific page, status: "+status );
+                toaster.pop('error', "Σφάλμα", '<p>Error: status </p>', null, 'trustedHtml');
                 console.log( data);
                 def.reject("Failed to get spesific page");
             });
@@ -76,13 +76,15 @@ app.service("pagesService",function($http, $q,$rootScope){
         $http.post("http://pagesmanagement.azurewebsites.net/api/ResponsivePages",page, config)
             .success(function (data, status, headers, config)
             {
+                toaster.pop('success', "Δημιουργία σελιδας", '<p>Η δημιουργία ολοκληρώθηκε με επιτυχεία!!!</p>', 3000, 'trustedHtml');
                 $rootScope.$emit("CallParentMethodTwo", {});
                 console.log( data);
                 def.resolve(data);
             })
             .error(function (data, status, headers, config)
             {
-                alert("Failed to post page, status: "+status );
+
+                toaster.pop('error', "Δημιουργία σελιδας", '<p>Error: status </p>', null, 'trustedHtml');
                 console.log( data);
                 def.reject("Failed to post page");
             });
@@ -102,12 +104,13 @@ app.service("pagesService",function($http, $q,$rootScope){
         return $http.put("http://pagesmanagement.azurewebsites.net/api/ResponsivePages",page, config)
             .success(function (data, status, headers, config)
             {
+                toaster.pop('success', "Ενημέρωση αλλαγών", '<p>Η ενημέρωση ολοκληρώθηκε με επιτυχεία!!!</p>', 3000, 'trustedHtml');
                 console.log( data);
                 def.resolve(data);
             })
             .error(function (data, status, headers, config)
             {
-                alert("Failed to put page, status: "+status );
+                toaster.pop('error', "Ενημέρωση αλλαγών", '<p>Error: status </p>', null, 'trustedHtml');
                 console.log( data);
                 def.reject("Failed to put page");
             });
@@ -127,12 +130,13 @@ app.service("pagesService",function($http, $q,$rootScope){
         return $http.delete("http://pagesmanagement.azurewebsites.net/api/ResponsivePages", config)
             .success(function (data, status, headers, config)
             {
+                toaster.pop('success', "Διαγραφή", '<p>Η διαγραφή ολοκληρώθηκε με επιτυχεία!!!</p>', 3000, 'trustedHtml');
                 console.log(data);
                 def.resolve(data);
             })
             .error(function (data, status, headers, config)
             {
-                alert("Failed to detele page, status: "+status );
+                toaster.pop('error', "Διαγραφή", '<p>Error: status </p>', null, 'trustedHtml');
                 console.log( data);
                 def.reject("Failed to detele page");
             });

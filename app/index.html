@@ -11,11 +11,11 @@
   <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
 
-
   <!-- Custom style used here -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/table.css">
   <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.min.css">
 
 </head>
 <body layout="row" ng-controller="mainCtrl">
@@ -107,7 +107,7 @@
     </div>
   </md-toolbar>
 
-
+  <toaster-container toaster-options="{'time-out': 3000, 'close-button':true}"></toaster-container>
 
     <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
     <div ui-view><div class="under"><img src="images/under_construction_image.gif"></div></div>
@@ -129,6 +129,7 @@
 <script src="bower_components/angular-moment/angular-moment.min.js"></script>
 <script src="bower_components/hammerjs/hammer.min.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angularjs-toaster/toaster.min.js"></script>
 <script src='http://greggman.com/downloads/examples/colresizable/colResizable-1.5.min.js'></script>
 
 <script src="app.js"></script>
@@ -144,6 +145,7 @@
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
+
 
 </body>
 </html>
