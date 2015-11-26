@@ -1,0 +1,87 @@
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #05abf2;
+    top: -2.25rem;
+    -webkit-transition: all 0.125s ease;
+    transition: all 0.125s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 33.3333%;
+    margin: 2rem 0 1rem;
+    position: relative;
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { width: 100%; }
+input{
+    background-color: white;
+}
+input,
+textarea {
+    padding: 1rem 1rem;
+    border: 0;
+    width: 80%;
+    font-size: 1rem;
+}
+
+input ~ span,
+textarea ~ span {
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #05abf2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.125s ease;
+    transition: all 0.125s ease;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    mix-height: 30px;
+    background-color: white;
+    resize: none;
+}
+
+fieldset {
+    padding-top:10px;
+    border:1px solid #05abf2;
+    border-radius:8px;
+    box-shadow:0 0 10px #666;
+    background-color: white;
+}
+legend {
+    float:left;
+    color: #05abf2;
+    margin-top:-30px;
+    background:#ffffff50;
+}
+legend + * {
+    clear:both;
+}
+.cont{
+    padding: 30px 10px 10px 10px;
+}

@@ -1,0 +1,61 @@
+   <div class="cont">
+    <md-card-content>
+        <div layout="column" layout-wrap>
+            <div flex="100" flex-gt-sm="30" layout="column">
+                <fieldset class="standard" flex>
+                    <legend> Title </legend>
+                    <div layout="row" layout-wrap flex>
+                        <div class="styled-input">
+                            <input type="text" ng-model="page.title" required />
+                            <label>Title</label>
+                            <span></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <br/><br/>
+            <div flex="100" flex-gt-sm="30" layout="column">
+                <fieldset class="standard" flex>
+                    <legend>Description</legend>
+                    <div layout="row" layout-wrap flex>
+                        <div class="styled-input wide">
+                            <textarea ng-model="page.description"  required></textarea>
+                            <label>Description</label>
+                            <span></span>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <br/><br/>
+        <div layout="column" layout-wrap>
+            <div flex="100" flex-gt-sm="20" layout="column">
+                <fieldset class="standard" flex>
+                    <legend> Type </legend>
+                    <div layout="row" layout-wrap flex>
+                        <md-radio-group ng-model="page.type" class="md-primary">
+                            <md-radio-button value="0" class="md-primary">Menu</md-radio-button>
+                            <md-radio-button value="1"> Events </md-radio-button>
+                            <md-radio-button value="2">Content</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                </fieldset>
+            </div>
+            <br/><br/>
+            <div flex="100" flex-gt-sm="10" layout="column">
+                <fieldset class="standard" flex>
+                    <legend>Active</legend>
+                    <div layout="row" layout-wrap flex>
+                        <md-switch class="md-primary md-block" md-no-ink aria-label="Switch No Ink" ng-model="page.isActive">
+                            Active
+                        </md-switch>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <br/>
+        <md-button ng-click="updatePage()" class="md-raised md-primary">Save</md-button>
+        <md-button ng-click="navigate('pages')" class="md-raised md-primary">Cancel</md-button>
+    </md-card-content>
+
+   </div>
